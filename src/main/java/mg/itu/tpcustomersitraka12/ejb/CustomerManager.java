@@ -25,6 +25,10 @@ public class CustomerManager {
        return em.merge(customer);
     }
 
+    public Customer findById(int idCustomer) {  
+        return em.find(Customer.class, idCustomer);  
+    }
+    
     public void persist(Customer customer) {
        em.persist(customer);
     }
